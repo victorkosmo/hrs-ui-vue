@@ -49,7 +49,9 @@ export default {
   justify-content: center;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
   width: 100%; /* Default to full width */
 }
