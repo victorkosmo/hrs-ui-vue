@@ -100,7 +100,6 @@ p {
 }
 
 label {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  @apply label-regular;
   color: var(--slate-600);
 }
