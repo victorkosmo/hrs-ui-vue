@@ -55,14 +55,6 @@
       "fontSize": "16"
     }
   },
-  "button-regular": {
-    "$type": "typography",
-    "$value": {
-      "fontFamily": "Inter",
-      "fontWeight": "Regular",
-      "fontSize": "16"
-    }
-  },
   "label-regular": {
     "$type": "typography",
     "$value": {
