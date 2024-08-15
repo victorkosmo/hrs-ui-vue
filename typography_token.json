@@ -1,0 +1,58 @@
+{
+  "h1": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Bold",
+      "fontSize": "30"
+    }
+  },
+  "h2": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Semi Bold",
+      "fontSize": "24"
+    }
+  },
+  "h3": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Semi Bold",
+      "fontSize": "20"
+    }
+  },
+  "text-regular": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Regular",
+      "fontSize": "17"
+    }
+  },
+  "text-semibold": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Semi Bold",
+      "fontSize": "17"
+    }
+  },
+  "input-regular": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Regular",
+      "fontSize": "15"
+    }
+  },
+  "label-regular": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Medium",
+      "fontSize": "14"
+    }
+  }
+}
