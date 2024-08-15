@@ -70,7 +70,7 @@ h3 {
 
 .button-regular {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
 }
 
@@ -82,7 +82,7 @@ h3 {
 
 .button-large {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 18px;
 }
 
