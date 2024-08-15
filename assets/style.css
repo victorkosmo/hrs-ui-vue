@@ -80,6 +80,12 @@ h3 {
   font-size: 14px;
 }
 
+.button-large {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .regular-semibold {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
