@@ -1,6 +1,6 @@
 <template>
   <div class="input-wrapper">
-    <label v-if="label" :for="id">{{ label }}</label>
+    <label v-if="showLabel && label" :for="id">{{ label }}</label>
     <input
       :id="id"
       :type="type"
@@ -40,6 +40,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    showLabel: {
+      type: Boolean,
+      default: true,
+    },
   },
 };
 </script>
@@ -48,7 +52,7 @@ export default {
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 label {
@@ -59,7 +63,7 @@ label {
 input {
   border: 2px solid transparent;
   border-radius: 6px;
-  padding: 8px 12px; /* Different padding for x and y */
+  padding: 8px 12px;
   background-color: var(--slate-100, #f1f5f9);
   font-size: 15px;
   color: var(--slate-500, #64748b);

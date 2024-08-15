@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import './typography.css';
 
 :root {
   --slate-50: #f8fafc;
@@ -30,82 +30,4 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--slate-50);
-}
-
-h1 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-}
-
-h2 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-}
-
-h3 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.text-regular {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-}
-
-.text-semibold {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.input-regular {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-.button-regular {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.label-regular {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.button-large {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.regular-semibold {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-}
-
-h1 {
-  font-family: 'Inter', sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--blue-800);
-}
-
-p {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  color: var(--slate-600);
-}
-
-label {
-  @apply label-regular;
-  color: var(--slate-600);
 }

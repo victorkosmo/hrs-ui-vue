@@ -51,7 +51,7 @@
     "$type": "typography",
     "$value": {
       "fontFamily": "Inter",
-      "fontWeight": "Regular",
+      "fontWeight": "Medium",
       "fontSize": "16"
     }
   },
