@@ -73,7 +73,24 @@ p {
   color: var(--slate-600);
 }
 
+a {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--slate-500);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-500);
+}
+
 label {
   @apply label-regular;
   color: var(--slate-600);
+}
+
+.menu-tab-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16.5px;
 }

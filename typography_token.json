@@ -70,5 +70,13 @@
       "fontWeight": "Semi Bold",
       "fontSize": "18"
     }
+  },
+  "menu-tab-text": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Medium",
+      "fontSize": "16.5"
+    }
   }
 }

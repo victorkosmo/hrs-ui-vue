@@ -1,4 +1,4 @@
-<!-- components/LoginLayout.vue -->
+<!-- components/layouts/LoginLayout.vue -->
 <template>
     <div class="centered-layout">
       <slot />
