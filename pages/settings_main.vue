@@ -7,6 +7,7 @@ import SectionTitle from '../components/SectionTitle.vue'
 import MiniTab from '../components/MiniTab.vue'
 import MiniTabsNav from '../components/MiniTabsNav.vue'
 import SectionCard from '../components/SectionCard.vue'
+import KeyValueText from '~/components/KeyValueText.vue'
 </script>
 
 <template>
@@ -15,20 +16,14 @@ import SectionCard from '../components/SectionCard.vue'
       <MiniTabsNav :tabs="['Профиль', 'Организация', 'Пользователи', 'Причины отказа']" :selectedIndex="0" />
       <SectionCard title titleValue="Профиль">
         <div class="settings-container">
-          <div>
-            <p class="text-semibold">users.name</p>
-            <p>users.email</p>
-            <p>users.role</p>
-          </div>
-          <a href="">Редактировать</a>
+          <KeyValueText keyText="Ivan Ivanov" valueText="ivanov.i@gmail.com" type="vertical" size="medium"/>
+          <a href="">Изменить</a>
         </div>
       </SectionCard>
       <SectionCard title titleValue="Просмотры">
         <div class="settings-container">
-          <div>
-            <p>Просмотры: <span style="color: var(--slate-400)">Включены</span></p>
-          </div>
-          <a href="">Редактировать</a>
+          <KeyValueText keyText="Просмотры" valueText="Включены" type="horizontal" size="medium"/>
+          <a href="">Изменить</a>
         </div>
       </SectionCard>
   </SidebarLayout>

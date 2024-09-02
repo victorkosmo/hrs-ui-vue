@@ -5,6 +5,22 @@ import InputEl from '../components/InputEl.vue'
 import ButtonEL from '../components/ButtonEl.vue'
 </script>
 
+<script>
+  //go to '/vacancies' page after button click
+  export default {
+  components: {
+    LoginLayout,
+    InputEl,
+    ButtonEL
+  },
+  methods: {
+    login() {
+      this.$router.push('/vacancies')
+    }
+  }
+}
+</script>
+
 <template>
   <LoginLayout>
     <div class="form-container">
@@ -23,7 +39,7 @@ import ButtonEL from '../components/ButtonEl.vue'
           :showLabel="false"
         />
       </div>
-      <ButtonEl styleType="main" size="large">Вход</ButtonEl>
+      <ButtonEl styleType="main" size="large" @click="login">Вход</ButtonEl>
       <p>Забыли пароль?</p>
     </div>
   </LoginLayout>

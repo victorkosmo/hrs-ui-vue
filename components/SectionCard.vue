@@ -4,7 +4,7 @@
     <div v-if="title" class="section-title">
       <div class="label-regular" style="color: var(--slate-500)">{{ titleValue }}</div>
     </div>
-    <div class="section-content">
+    <div class="section-content" :class="{ 'divided': divided }">
       <slot></slot>
     </div>
   </div>
@@ -25,6 +25,10 @@ export default {
     customClass: {
       type: String,
       default: "",
+    },
+    divided: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -61,6 +65,11 @@ export default {
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.section-content.divided > :not(:last-child) {
+  border-bottom: 0.5px solid var(--slate-100);
+  padding-bottom: 25px;
 }
 
 .slot-template-instance {

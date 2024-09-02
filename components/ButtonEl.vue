@@ -36,7 +36,7 @@ export default {
     },
     iconSrc: {
       type: String,
-      default: "add-square-02.svg",
+      default: "icons/white/plus-circle.svg",
     },
   },
 };

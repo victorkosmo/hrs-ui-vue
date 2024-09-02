@@ -1,10 +1,10 @@
 <template>
-  <div class="user-tab">
+  <a class="user-tab" href="/settings_main">
     <div class="user-info-col">
       <div class="user-name text-semibold">{{ userName }}</div>
       <div class="org-title input-regular">{{ orgTitle }}</div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
