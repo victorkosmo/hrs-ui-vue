@@ -1,6 +1,6 @@
 <template>
   <div class="input-wrapper">
-    <label v-if="showLabel && label" :for="id">{{ label }}</label>
+    <label class="label-regular" style="color: var(--slate-500);" v-if="showLabel && label" :for="id">{{ label }}</label>
     <input
       :id="id"
       :type="type"
@@ -53,11 +53,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-
-label {
-  font-size: 14px;
-  color: var(--slate-600, #475569);
 }
 
 input {
