@@ -48,15 +48,23 @@ export default {
       default: true,
     },
   },
-  watch: {
-    items: {
-      immediate: true,
-      handler(newItems) {
-        if (this.modelValue === null && newItems.length > 0) {
-          this.$emit('update:modelValue', newItems[0].value);
-        }
-      }
+  data() {
+    return {
+      selectedValue: this.modelValue || this.defaultValue,
+    };
+  },
+  computed: {
+    defaultValue() {
+      return this.items.length > 0 ? this.items[0].value : null;
     }
+  },
+  watch: {
+    selectedValue(newValue) {
+      this.$emit('update:modelValue', newValue);
+    },
+    modelValue(newValue) {
+      this.selectedValue = newValue;
+    },
   },
 };
 </script>
