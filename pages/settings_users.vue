@@ -10,6 +10,7 @@ import TableItem from '../components/TableItem.vue'
 import SectionTable from '../components/SectionTable.vue'
 import ModalButton from '../components/ModalButton.vue'
 import InputEl from '../components/InputEl.vue'
+import SelectEl from '../components/SelectEl.vue'
 </script>
 
 <template>
