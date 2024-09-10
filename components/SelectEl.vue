@@ -6,10 +6,10 @@
       <select
         :id="id"
         :value="modelValue"
-        @change="$emit('update:modelValue', $event.target.value)"
+        @change="handleChange"
         :disabled="disabled"
       >
-        <option v-for="item in items" :key="item.value" :value="item.value">
+        <option v-for="(item, index) in items" :key="item.value" :value="index">
           {{ item.label }}
         </option>
       </select>
@@ -24,7 +24,7 @@ export default {
   props: {
     modelValue: {
       type: [String, Number],
-      default: null,
+      default: "0",
     },
     items: {
       type: Array,
@@ -48,24 +48,29 @@ export default {
       default: true,
     },
   },
-  data() {
-    return {
-      selectedValue: this.modelValue || this.defaultValue,
-    };
+  mounted() {
+    this.initializeDefaultValue();
   },
-  computed: {
-    defaultValue() {
-      return this.items.length > 0 ? this.items[0].value : null;
+  methods: {
+    initializeDefaultValue() {
+      if (this.modelValue === "0" && this.items.length > 0) {
+        this.$emit('update:modelValue', "0");
+      }
+    },
+    handleChange(event) {
+      const index = event.target.value;
+      const selectedItem = this.items[index];
+      this.$emit('update:modelValue', selectedItem.value);
     }
   },
   watch: {
-    selectedValue(newValue) {
-      this.$emit('update:modelValue', newValue);
-    },
-    modelValue(newValue) {
-      this.selectedValue = newValue;
-    },
-  },
+    items: {
+      immediate: true,
+      handler() {
+        this.$nextTick(this.initializeDefaultValue);
+      }
+    }
+  }
 };
 </script>
 
