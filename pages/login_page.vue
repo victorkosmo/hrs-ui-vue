@@ -44,34 +44,3 @@ import ButtonEL from '../components/ButtonEl.vue'
     </div>
   </LoginLayout>
 </template>
-
-<style scoped>
-.form-container {
-  display: flex;
-  width: 100%;
-  max-width: 400px;
-  padding: 5px;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.input-container {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: 5px;
-}
-
-@media screen and (min-width: 768px) {
-  .form-container {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .form-container {
-    width: 25%;
-  }
-}
-</style>
