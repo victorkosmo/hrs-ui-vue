@@ -6,9 +6,10 @@ import MiniTab from '../components/MiniTab.vue'
 import MiniTabsNav from '../components/MiniTabsNav.vue'
 import SectionCard from '../components/SectionCard.vue'
 import KeyValueText from '~/components/KeyValueText.vue'
-import ButtonEl from '../components/ButtonEl.vue'
 import TableItem from '../components/TableItem.vue'
 import SectionTable from '../components/SectionTable.vue'
+import ModalButton from '../components/ModalButton.vue'
+import InputEl from '../components/InputEl.vue'
 </script>
 
 <template>
@@ -17,7 +18,26 @@ import SectionTable from '../components/SectionTable.vue'
       <MiniTabsNav :tabs="['Профиль', 'Организация', 'Пользователи', 'Причины отказа']" :selectedIndex="2" />
         <div class="section-nav">
           <p>Пользователи организации</p>
-          <ButtonEl icon fit>Пользователь</ButtonEl>
+          <ModalButton buttonText="Пользователь" modalTitle="Добавить нового пользователя">
+            <div class="input-container-lg">
+              <InputEl id="user_name" type="text" placeholder="Имя пользователя" :showLabel="true"
+                label="Имя"/>
+              <InputEl id="user_name" type="text" placeholder="Почта пользователя" :showLabel="true"
+                label="Почта"/>
+              <SelectEl
+              v-model="selectedValue"
+              :items="[
+                { value: 'recruiter', label: 'Рекрутер' },
+                { value: 'client', label: 'Заказчик' },
+                { value: 'follower', label: 'Наблюдатель' },
+              ]"
+              label="Роль пользователя"/>
+            </div>
+            <div class="buttons-row">
+              <ButtonEl styleType="outlined" size="large">Отмена</ButtonEl>
+              <ButtonEl styleType="main" size="large">Добавить</ButtonEl>
+            </div>
+          </ModalButton>
         </div>
         <SectionTable col1Title="Пользователь" col2Title="Роль" col3Title="Статус">
           <TableItem keyText="Ivan Ivanov" valueText="ivanov.i@gmail.com" col2Text="Админ" col3Text="Активный" icnBtn/>
