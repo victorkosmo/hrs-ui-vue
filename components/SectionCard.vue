@@ -72,6 +72,7 @@ export default {
   padding-bottom: 25px;
 }
 
+
 .slot-template-instance {
   align-self: stretch !important;
   height: 48px !important;

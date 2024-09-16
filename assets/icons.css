@@ -1,0 +1,16 @@
+/* assets/icons.css */
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box {
+  width: 100%;
+  height: 100%;
+  transition: stroke 0.2s ease;
+}
+
+.icon-container.has-hover:hover .icon-box {
+  stroke: var(--hover-color);
+}

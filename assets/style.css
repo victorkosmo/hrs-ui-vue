@@ -1,5 +1,7 @@
 @import './typography.css';
 @import './modals.css';
+@import './dropdowns.css';
+@import './icons.css';
 
 :root {
   --slate-50: #f8fafc;

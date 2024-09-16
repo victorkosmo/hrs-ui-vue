@@ -11,6 +11,8 @@ import SectionTable from '../components/SectionTable.vue'
 import ModalButton from '../components/ModalButton.vue'
 import InputEl from '../components/InputEl.vue'
 import SelectEl from '../components/SelectEl.vue'
+import Dropdown from '../components/Dropdown.vue'
+import CirclesIcn from '../components/icons/circlesIcn.vue'
 </script>
 
 <template>
@@ -41,10 +43,53 @@ import SelectEl from '../components/SelectEl.vue'
           </ModalButton>
         </div>
         <SectionTable col1Title="Пользователь" col2Title="Роль" col3Title="Статус">
-          <TableItem keyText="Ivan Ivanov" valueText="ivanov.i@gmail.com" col2Text="Админ" col3Text="Активный" icnBtn/>
-          <TableItem keyText="Ольга Петрова" valueText="petrova52@yahoo.com" col2Text="Рекрутер" col3Text="Активный" icnBtn/>
-          <TableItem keyText="Анна Смирнова" valueText="smirnova.aa@yandex.ru" col2Text="Заказчик" col3Text="Активный" icnBtn/>
-          <TableItem keyText="Алексей" valueText="alekseev@adlandev.com" col2Text="Наблюдатель" col3Text="Доступ ограничен" icnBtn/>
+          <TableItem keyText="Ivan Ivanov" valueText="ivanov.i@gmail.com" col2Text="Админ" col3Text="Активный">
+            <template #options>
+              <CirclesIcn color="var(--slate-300)" size="26" />
+            </template>
+          </TableItem>
+          <TableItem keyText="Ольга Петрова" valueText="petrova52@yahoo.com" col2Text="Рекрутер" col3Text="Активный">
+            <template #options>
+              <Dropdown width="220px">
+                <template #trigger>
+                  <CirclesIcn color="var(--slate-400)" size="26" hover="var(--blue-500)"/>
+                </template>
+                <template #content>
+                  <ul class="dropdown-list">
+                    <DropdownItem text="Ограничить доступ"/>
+                  </ul>
+                </template>
+              </Dropdown>
+            </template>
+          </TableItem>
+          <TableItem keyText="Анна Смирнова" valueText="smirnova.aa@yandex.ru" col2Text="Заказчик" col3Text="Приглашение отправлено">
+            <template #options>
+              <Dropdown width="220px">
+                <template #trigger>
+                  <CirclesIcn color="var(--slate-400)" size="26" hover="var(--blue-500)"/>
+                </template>
+                <template #content>
+                  <ul class="dropdown-list">
+                    <DropdownItem text="Ограничить доступ"/>
+                  </ul>
+                </template>
+              </Dropdown>
+            </template>
+          </TableItem>
+          <TableItem keyText="Алексей" valueText="alekseev@adlandev.com" col2Text="Наблюдатель" col3Text="Доступ ограничен">
+            <template #options>
+              <Dropdown width="220px">
+                <template #trigger>
+                  <CirclesIcn color="var(--slate-400)" size="26" hover="var(--blue-500)"/>
+                </template>
+                <template #content>
+                  <ul class="dropdown-list">
+                    <DropdownItem text="Открыть доступ"/>
+                  </ul>
+                </template>
+              </Dropdown>
+            </template>
+          </TableItem>
         </SectionTable>
   </SidebarLayout>
 </template>

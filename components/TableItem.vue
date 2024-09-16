@@ -1,23 +1,24 @@
+<!-- components/TableItem.vue -->
 <template>
   <div id="table-item" class="table-item">
-      <!-- Column 1: Key-Value Text -->
-      <div class="col col-1">
-        <div class="key-value-text">
-          <p class="key-value-wrapper" style="font-weight: 500; font-size: 15.5px;">{{ keyText }}</p>
-          <p class="key-value-wrapper" style="color: var(--slate-400); font-size: 15px;">{{ valueText }}</p>
-        </div>
+    <!-- Column 1: Key-Value Text -->
+    <div class="col col-1">
+      <div class="key-value-text">
+        <p class="key-value-wrapper" style="font-weight: 500; font-size: 15.5px;">{{ keyText }}</p>
+        <p class="key-value-wrapper" style="color: var(--slate-400); font-size: 15px;">{{ valueText }}</p>
       </div>
-      
-      <!-- Column 2: Description -->
-      <div class="col col-2">
-        <p class="label-regular" style="color: var(--slate-600);">{{ col2Text }}</p>
-      </div>
-      
-      <!-- Column 3: Additional Text and Optional Icon -->
-      <div class="col col-3">
-        <p class="label-regular" style="color: var(--slate-400);">{{ col3Text }}</p>
-        <img v-if="icnBtn" :src="iconPath" class="icon-instance" />
-      </div>
+    </div>
+    
+    <!-- Column 2: Description -->
+    <div class="col col-2">
+      <p class="label-regular" style="color: var(--slate-600);">{{ col2Text }}</p>
+    </div>
+    
+    <!-- Column 3: Additional Text and Optional Slot -->
+    <div class="col col-3">
+      <p class="label-regular" style="color: var(--slate-400);">{{ col3Text }}</p>
+      <slot name="options"></slot>
+    </div>
   </div>
 </template>
 
@@ -25,10 +26,6 @@
 export default {
   name: "TableItem",
   props: {
-    icnBtn: {
-      type: Boolean,
-      default: false,
-    },
     keyText: {
       type: String,
       required: true,
@@ -46,11 +43,6 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      iconPath: 'icons/slate/ellipsis-horizontal.svg', // Hardcoded icon path
-    };
-  },
 };
 </script>
 
@@ -59,11 +51,8 @@ export default {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 8px 20px;
+  padding: 6px 20px;
   box-sizing: border-box;
-}
-.table-item:hover {
-  background-color: var(--slate-50);
 }
 
 .col {
@@ -82,6 +71,7 @@ export default {
 .col-3 {
   width: 30%;
   justify-content: flex-end;
+  align-items: center;
   gap: 10px;
 }
 
