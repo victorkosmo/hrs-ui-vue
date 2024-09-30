@@ -11,32 +11,7 @@ import ButtonEl from '../components/ButtonEl.vue'
 
 <template>
   <SidebarLayout :selectedTabIndex="0">
-      <div class="section-top-container">
-        <h2 style="color: var(--slate-500);">Вакансии</h2>
-        <ModalWindow modalTitle="Создать новую вакансию">
-            <template #trigger="{ openModal }">
-              <ButtonEl @click="openModal">Новая вакансия</ButtonEl>
-            </template>
-            <template #content>
-              <div class="input-container-lg">
-                <InputEl id="vacancy_title" type="text" placeholder="Название вакансии" :showLabel="true" label="Название вакансии"/>
-                <!-- выбор менеджера, дефолтное значение - id админа, если в компании есть рекрутеры то в списке появятся их id -->
-                <SelectEl
-                v-model="selectedValue"
-                :items="[
-                  { value: '5', label: 'Иван Иванов' },
-                  { value: '12', label: 'Ольга В.' },
-                ]"
-                label="Назначить менеджера"/>
-                <InputEl id="vacancy_description" type="text" placeholder="Можно оставить пустым" :showLabel="true" label="Описание вакансии"/>
-              </div>
-              <div class="buttons-row">
-                <ButtonEl styleType="outlined" size="large">Отмена</ButtonEl>
-                <ButtonEl styleType="main" size="large">Создать</ButtonEl>
-              </div>
-            </template>
-        </ModalWindow>
-      </div>
+      <h2 style="color: var(--slate-500);">Вакансии</h2>
       <VacancyCard
         :id="123"
         title="Software Engineer"

@@ -1,4 +1,4 @@
-<!-- components/icons/circlesIcn.vue -->
+<!-- components/icons/backArrow.vue -->
 <template>
   <div
     class="icon-container"
@@ -8,6 +8,7 @@
       height: `${size}px`,
       '--hover-color': hover,
     }"
+    @click="handleClick"
   >
     <svg 
       class="icon-box" 
@@ -20,7 +21,7 @@
       <path 
         stroke-linecap="round" 
         stroke-linejoin="round" 
-        d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" 
+        d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
       />
     </svg>
   </div>
@@ -44,6 +45,17 @@ export default {
     strokeWidth: {
       type: Number,
       default: 1.5,
+    },
+    back: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    handleClick() {
+      if (this.back) {
+        window.history.back();
+      }
     },
   },
 };

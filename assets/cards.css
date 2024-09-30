@@ -1,0 +1,79 @@
+/* assets/cards.css */
+
+.vacancy-card {
+    background-color: #ffffff;
+    border: 1px solid var(--slate-100);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+  }
+  
+  .vacancy-card:hover {
+    border: 1px solid var(--blue-200);
+    transition: border-color 0.3s ease;
+  }
+  
+  .vacancy-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Columns on larger screens */
+  .vacancy-title-col {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vacancy-stats-col {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+  }
+  
+  .vacancy-tags-col {
+    flex: 1.5;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  
+  .vacancy-status-col {
+    flex: 0.5;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Mobile layout */
+  @media (max-width: 768px) {
+    .vacancy-content {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  
+    .vacancy-title-col,
+    .vacancy-stats-col,
+    .vacancy-tags-col,
+    .vacancy-status-col {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  
+    .vacancy-status-col {
+      justify-content: flex-start;
+      align-self: flex-start; /* Align status with other items */
+    }
+    .vacancy-tags-col:empty {
+        display: none; /* Ensure that if it's empty, it's not displayed */
+      }
+  }
+  
+  

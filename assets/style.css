@@ -2,6 +2,7 @@
 @import './modals.css';
 @import './dropdowns.css';
 @import './icons.css';
+@import './cards.css';
 
 :root {
   --slate-50: #f8fafc;
@@ -78,6 +79,27 @@ body {
   align-items: center;
 }
 
+.section-top-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-top-container-col-1 {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+.section-top-container-col-2 {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+
 .form-container {
   display: flex;
   width: 100%;
@@ -101,13 +123,20 @@ body {
   flex-direction: column;
   gap: 16px;
 }
+
 .buttons-row {
   display: flex;
   width: 100%;
   gap: 5px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5px;
+  padding-top: 10px;
+}
+
+.icon-and-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
