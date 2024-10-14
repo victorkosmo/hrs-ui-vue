@@ -9,7 +9,7 @@ import ButtonEl from '../components/ButtonEl.vue'
 import SelectEl from '../components/SelectEl.vue'
 import StageSelector from '../components/StageSelector.vue'
 import MiniTabsNav from '../components/MiniTabsNav.vue'
-import StageItemFiller from '../components/StageItemFiller.vue'
+import StageItem from '../components/StageItem.vue'
 </script>
 
 <template>
@@ -28,10 +28,10 @@ import StageItemFiller from '../components/StageItemFiller.vue'
                     <template #content>
                         <MiniTabsNav :tabs="['Общее', 'Процесс']" :selectedIndex="1" />
                         <div class="input-container-lg">
-                            <StageItemFiller id="1" stageTitle="Добавлен" />
-                            <StageItemFiller id="2" stageTitle="Отказ" />
-                            <StageItemFiller id="3" stageTitle="Скрининг" />
-                            <StageItemFiller id="4" stageTitle="Первичное согласование" />
+                            <StageItem id="1" color="gray" title="Добавлен" />
+                            <StageItem id="2" color="red" title="Отказ" />
+                            <StageItem id="3" color="green" title="Скрининг" mutable />
+                            <StageItem id="4" color="blue" title="Первичное согласование" mutable />
                         </div>
                             <div class="buttons-row">
                             <ButtonEl styleType="outlined" size="large">Отмена</ButtonEl>
