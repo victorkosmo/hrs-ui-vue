@@ -139,6 +139,18 @@ body {
   align-items: center;
 }
 
+.selector-content {
+  background-color: #ffffff;
+  border: 1px solid var(--slate-100);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+}
+
 @media screen and (min-width: 768px) {
   .form-container {
     width: 50%;

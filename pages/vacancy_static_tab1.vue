@@ -7,6 +7,8 @@ import ModalWindow from '../components/ModalWindow.vue'
 import InputEl from '../components/InputEl.vue'
 import ButtonEl from '../components/ButtonEl.vue'
 import SelectEl from '../components/SelectEl.vue'
+import StageSelector from '../components/StageSelector.vue'
+import MiniTabsNav from '../components/MiniTabsNav.vue'
 </script>
 
 <template>
@@ -23,6 +25,7 @@ import SelectEl from '../components/SelectEl.vue'
                         <ButtonEl styleType="outlined" @click="openModal">Редактировать</ButtonEl>
                     </template>
                     <template #content>
+                        <MiniTabsNav :tabs="['Общее', 'Процесс']" :selectedIndex="0" />
                         <div class="input-container-lg">
                             <InputEl id="vacancy_title" type="text" modelValue="DevOps Инженер" :showLabel="true" label="Заголовок вакансии"/>
                             <!-- назначать менеджера может только админ -->
@@ -52,6 +55,14 @@ import SelectEl from '../components/SelectEl.vue'
                 </ModalWindow>
             </div>
         </div>
+        <StageSelector
+              :stages="[
+                { id: 1, title: 'Добавлен' },
+                { id: 2, title: 'Отказ' },
+                { id: 3, title: 'Скрининг' },
+                { id: 4, title: 'Первичное согласование' }
+              ]"
+            />
         <div id="vacancy-content-container">
             <p>DevOps Инженер в отдел разрабтки</p>
         </div>
