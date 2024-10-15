@@ -27,7 +27,7 @@ import StageItem from '../components/StageItem.vue'
                     </template>
                     <template #content>
                         <MiniTabsNav :tabs="['Общее', 'Процесс']" :selectedIndex="1" />
-                        <div class="input-container-lg">
+                        <div class="stage-order-col">
                             <StageItem id="1" color="gray" title="Добавлен" />
                             <StageItem id="2" color="red" title="Отказ" />
                             <StageItem id="3" color="green" title="Скрининг" mutable />

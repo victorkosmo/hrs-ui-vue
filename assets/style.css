@@ -124,6 +124,13 @@ body {
   gap: 16px;
 }
 
+.stage-order-col {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .buttons-row {
   display: flex;
   width: 100%;
