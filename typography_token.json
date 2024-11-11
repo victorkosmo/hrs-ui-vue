@@ -7,12 +7,28 @@
       "fontSize": "30"
     }
   },
+  "h1-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Bold",
+      "fontSize": "28"
+    }
+  },
   "h2": {
     "$type": "typography",
     "$value": {
       "fontFamily": "Inter",
       "fontWeight": "Semi Bold",
       "fontSize": "24"
+    }
+  },
+  "h2-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Semi Bold",
+      "fontSize": "22"
     }
   },
   "h3": {
@@ -23,12 +39,28 @@
       "fontSize": "20"
     }
   },
+  "h3-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Semi Bold",
+      "fontSize": "18"
+    }
+  },
   "text-regular": {
     "$type": "typography",
     "$value": {
       "fontFamily": "Inter",
       "fontWeight": "Regular",
       "fontSize": "17"
+    }
+  },
+  "text-regular-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Regular",
+      "fontSize": "15"
     }
   },
   "text-semibold": {
@@ -39,12 +71,28 @@
       "fontSize": "17"
     }
   },
+  "text-semibold-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Semi Bold",
+      "fontSize": "15"
+    }
+  },
   "input-regular": {
     "$type": "typography",
     "$value": {
       "fontFamily": "Inter",
       "fontWeight": "Regular",
       "fontSize": "15"
+    }
+  },
+  "input-regular-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Regular",
+      "fontSize": "13"
     }
   },
   "button-regular": {
@@ -55,12 +103,28 @@
       "fontSize": "16"
     }
   },
+  "button-regular-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Medium",
+      "fontSize": "14"
+    }
+  },
   "label-regular": {
     "$type": "typography",
     "$value": {
       "fontFamily": "Inter",
       "fontWeight": "Medium",
       "fontSize": "14"
+    }
+  },
+  "label-regular-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Medium",
+      "fontSize": "12"
     }
   },
   "button-large": {
@@ -71,12 +135,44 @@
       "fontSize": "18"
     }
   },
+  "button-large-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Semi Bold",
+      "fontSize": "16"
+    }
+  },
   "menu-tab-text": {
     "$type": "typography",
     "$value": {
       "fontFamily": "Inter",
       "fontWeight": "Medium",
       "fontSize": "16.5"
+    }
+  },
+  "menu-tab-text-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Medium",
+      "fontSize": "14.5"
+    }
+  },
+  "dropdown-item-text": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Regular",
+      "fontSize": "14"
+    }
+  },
+  "dropdown-item-text-mob": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": "Regular",
+      "fontSize": "12.5"
     }
   }
 }

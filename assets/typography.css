@@ -1,76 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Heading 1 (H1) */
 h1 {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 30px; /* Default desktop size */
 }
 
+/* Mobile adjustment for H1 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Mobile-specific size for h1 */
+  }
+}
+
+/* Heading 2 (H2) */
 h2 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 24px; /* Default desktop size */
 }
 
+/* Mobile adjustment for H2 */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 22px; /* Mobile-specific size for h2 */
+  }
+}
+
+/* Heading 3 (H3) */
 h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 20px; /* Default desktop size */
 }
 
+@media (max-width: 768px) {
+  h3 {
+    font-size: 18px; /* Mobile-specific size for h3 */
+  }
+}
+
+/* Regular Text */
 .text-regular {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 17px; /* Default desktop size */
 }
 
+@media (max-width: 768px) {
+  .text-regular {
+    font-size: 15px; /* Mobile-specific size for regular text */
+  }
+}
+
+/* Semibold Text */
 .text-semibold {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 17px; /* Default desktop size */
 }
 
+@media (max-width: 768px) {
+  .text-semibold {
+    font-size: 15px; /* Mobile-specific size for semibold text */
+  }
+}
+
+/* Input Text */
 .input-regular {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 15px; /* Default desktop size */
 }
 
+@media (max-width: 768px) {
+  .input-regular {
+    font-size: 13px; /* Mobile-specific size for input text */
+  }
+}
+
+/* Button Regular */
 .button-regular {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 16px; /* Default desktop size */
 }
 
+@media (max-width: 768px) {
+  .button-regular {
+    font-size: 14px; /* Mobile-specific size for button */
+  }
+}
+
+/* Label Text */
 .label-regular {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 14px; /* Default desktop size */
 }
 
+@media (max-width: 768px) {
+  .label-regular {
+    font-size: 12px; /* Mobile-specific size for label text */
+  }
+}
+
+/* Large Button */
 .button-large {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 18px; /* Default desktop size */
 }
 
-.regular-semibold {
+@media (max-width: 768px) {
+  .button-large {
+    font-size: 16px; /* Mobile-specific size for large button */
+  }
+}
+
+.dropdown-item-text {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
 }
 
-h1 {
-  font-family: 'Inter', sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--blue-800);
+@media (max-width: 768px) {
+  .dropdown-item-text {
+    font-size: 12.5px;
+  }
 }
 
+/* Unchanged additional styles */
 p {
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   color: var(--slate-600);
+  margin: 0;
 }
 
 a {
@@ -85,7 +152,6 @@ a:hover {
 }
 
 label {
-  @apply label-regular;
   color: var(--slate-600);
 }
 
@@ -93,11 +159,4 @@ label {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16.5px;
-}
-
-.dropdiwn-item-text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  margin: 0;
 }

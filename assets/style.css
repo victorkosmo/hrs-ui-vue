@@ -3,6 +3,7 @@
 @import './dropdowns.css';
 @import './icons.css';
 @import './cards.css';
+@import './extension.css';
 
 :root {
   --slate-50: #f8fafc;
