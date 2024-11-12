@@ -45,3 +45,69 @@
     width: 90%;
   }
 }
+
+/* Resume Modal */
+
+.side-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end; /* Align modal to the right side */
+  align-items: stretch; /* Ensure the modal fills the full height */
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.side-modal-container {
+  background-color: white;
+  padding: 0px;
+  border-radius: 5px;
+  width: 55%;
+  max-width: 90%;
+  animation: scaleIn 0.3s ease;
+  height: 100%; /* Ensure modal fills full height */
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2); /* Add box-shadow for elevation */
+}
+
+.side-modal-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--slate-200); /* Add bottom border for the header */
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+.side-modal-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.side-modal-header a:hover,
+.side-modal-header a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media screen and (max-width: 700px) {
+  .side-modal-container {
+    width: 85%; /* Adjust modal width for smaller screens */
+  }
+}

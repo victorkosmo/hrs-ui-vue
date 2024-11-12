@@ -9,7 +9,7 @@
     </div>
     
     <!-- Table Content -->
-    <div class="table-content">
+    <div :class="['table-content', { 'table-content-small': size === 'small' }]" :style="tableContentStyle">
       <slot></slot>
     </div>
   </div>
@@ -34,6 +34,18 @@ export default {
     customClass: {
       type: String,
       default: "",
+    },
+    size: {
+      type: String,
+      default: "", // leave default empty to keep the current style if no size is specified
+    },
+  },
+  computed: {
+    tableContentStyle() {
+      // If the size prop is "small", apply the 8px padding; otherwise, keep the current padding
+      return this.size === "small"
+        ? { paddingTop: "8px", paddingBottom: "8px" }
+        : {};
     },
   },
 };
@@ -72,6 +84,19 @@ export default {
   padding-bottom: 12px;
 }
 
+/* Default style for divider */
+.table-content > :not(:last-child) {
+  border-bottom: 0.5px solid var(--slate-100);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for small size */
+.table-content-small > :not(:last-child) {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
 .col {
   display: flex;
   align-items: center;
@@ -94,12 +119,5 @@ export default {
 .label-regular {
   margin: 0;
   padding: 0;
-}
-
-/* Style for the divider in the slot content */
-.table-content > :not(:last-child) {
-  border-bottom: 0.5px solid var(--slate-100);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
 }
 </style>

@@ -1,5 +1,6 @@
 <script setup>
 import SidebarLayout from '../components/layouts/SidebarLayout.vue' 
+import SectionCard from '../components/SectionCard.vue'
 import BackArrow from '../components/icons/backArrow.vue'
 import ColorTag from '../components/ColorTag.vue'
 import ModalWindow from '../components/ModalWindow.vue'
@@ -9,19 +10,6 @@ import SelectEl from '../components/SelectEl.vue'
 import StageSelector from '../components/StageSelector.vue'
 import MiniTabsNav from '../components/MiniTabsNav.vue'
 import ApplicantItem from '~/components/ApplicantItem.vue'
-import ApplicantModal from '~/components/ApplicantModal.vue'
-
-import { ref } from 'vue';
-
-const showModal = ref(false);
-const applicantId = ref('');
-const applicantName = ref('');
-
-const openModal = (id, name) => {
-  applicantId.value = id;
-  applicantName.value = name;
-  showModal.value = true;
-};
 </script>
 
 <template>
@@ -72,26 +60,14 @@ const openModal = (id, name) => {
               :stages="[
                 { id: 1, title: 'Добавлен' },
                 { id: 2, title: 'Отказ' },
-                { id: 3, title: 'Скрининг' },
+                { id: 3, title: 'Скрининг'},
                 { id: 4, title: 'Первичное согласование' }
               ]"
             />
         <div id="vacancy-content-container" class="vacancy-content-container">
-            <SectionTable col1Title="Кандидат" col2Title="Стадия" col3Title="Добавлен" size="small">
-                <ApplicantItem id="123" keyText="Алексей Пономарев" valueText="Product Manager b2b" col2Text="Первичное согласование" col3Text="10 мин. назад" @click="openModal('123', 'Алексей Пономарев')"/>
-                <ApplicantItem id="124" keyText="Alexander Guselnikov" valueText="Product manager" col2Text="Отказ" col3Text="1 ч. назад"/>
-                <ApplicantItem id="125" keyText="Савилова Елена" valueText="Product Owner / Product manager" col2Text="Скрининг" col3Text="6 дн. назад"/>
-                <ApplicantItem id="126" valueText="Product manager" col2Text="Добавлен" col3Text="6 мес. назад"/>
-                <ApplicantItem id="127" valueText="CPO (Chief Product Owner / Chief Product Officer)" col2Text="Добавлен" col3Text="6 мес. назад"/>
-            </SectionTable>
+            <SectionCard titleValue="Кандидаты">
+                <p style="color: var(--slate-400);">Кандидаты не добавлены</p>
+            </SectionCard>
         </div>
-
-        <!-- Modal that opens when 'showModal' is true -->
-        <ApplicantModal
-            v-if="showModal"
-            :visible="showModal"
-            :applicantId="applicantId"
-            @close="showModal = false"
-        />
     </SidebarLayout>
 </template>

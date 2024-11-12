@@ -7,6 +7,7 @@ import ModalWindow from '../components/ModalWindow.vue'
 import InputEl from '../components/InputEl.vue'
 import ButtonEl from '../components/ButtonEl.vue'
 import SelectEl from '../components/SelectEl.vue'
+import SectionTable from '../components/SectionTable.vue'
 </script>
 
 <template>
@@ -52,8 +53,19 @@ import SelectEl from '../components/SelectEl.vue'
                 </ModalWindow>
             </div>
         </div>
-        <div id="vacancy-content-container">
-            <p>Описание вакансии id-{{ $route.params.id }}</p>
+        <div id="vacancy-content-container" class="vacancy-content-container">
+            <SectionTable col1Title="Пользователь" col2Title="Роль" col3Title="Статус">
+                <tr>
+                    <td><p>Иван Иванов</p></td>
+                    <td><p>Рекрутер</p></td>
+                    <td><p>В работе</p></td>
+                </tr>
+                <tr>
+                    <td><p>Ольга В.</p></td>
+                    <td><p>Заказчик</p></td>
+                    <td><p>Приостановлена</p></td>
+                </tr>
+            </SectionTable>
         </div>
     </SidebarLayout>
 </template>
