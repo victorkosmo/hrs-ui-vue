@@ -3,3 +3,12 @@
 .vacancy-content-container {
     width: 100%;
 }
+
+.container-row-fit {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+  }

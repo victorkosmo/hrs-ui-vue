@@ -139,6 +139,12 @@ p {
   color: var(--slate-600);
   margin: 0;
 }
+@media screen and (max-width: 768px) {
+  /* Adjust <p> tag font size for smaller screens */
+  p {
+    font-size: 15px;
+  }
+}
 
 a {
   font-family: 'Inter', sans-serif;

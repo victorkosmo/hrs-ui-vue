@@ -33,39 +33,71 @@ const openModal = (id, name) => {
                 <ColorTag text="В работе" color="green"/>
             </div>
             <div id="section-top-container-col-2" class="section-top-container-col-2">
-                <ModalWindow modalTitle="Редактировать вакансию">
-                    <template #trigger="{ openModal }">
-                        <ButtonEl styleType="outlined" @click="openModal">Редактировать</ButtonEl>
-                    </template>
-                    <template #content>
-                        <MiniTabsNav :tabs="['Общее', 'Процесс']" :selectedIndex="0" />
-                        <div class="input-container-lg">
-                            <InputEl id="vacancy_title" type="text" modelValue="DevOps Инженер" :showLabel="true" label="Заголовок вакансии"/>
-                            <!-- назначать менеджера может только админ -->
-                            <SelectEl
-                            v-model="selectedValue"
-                            :items="[
-                            { value: '5', label: 'Иван Иванов' },
-                            { value: '12', label: 'Ольга В.' },
-                            ]"
-                            label="Менеджер вакансии"/>
-                            <SelectEl
-                            v-model="selectedValue"
-                            :items="[
-                            { value: 'active', label: 'В работе' },
-                            { value: 'paused', label: 'Приостановлена' },
-                            { value: 'closed', label: 'Закрыта' },
-                            { value: 'draft', label: 'Черновик' },
-                            ]"
-                            label="Статус вакансии"/>
-                            <InputEl id="vacancy_description" type="text" modelValue="DevOps Инженер в отдел разрабтки" :showLabel="true" label="Описание вакансии"/>
-                        </div>
+                <!-- обе кнопки помещаются в container-row-fit -->
+                <div class="container-row-fit">
+                    <ModalWindow modalTitle="Добавить резюме">
+                        <template #trigger="{ openModal }">
+                            <ButtonEl styleType="main" @click="openModal">Добавить резюме</ButtonEl>
+                        </template>
+                        <template #content>
+                            <div class="input-container-lg">
+                                <InputEl id="user_name" type="text" placeholder="Имя кандидата" :showLabel="true" label="Имя"/>
+                                <!-- в заголовок резюме вставляется значение вкансии, которое можно редактировать -->
+                                <InputEl id="resume_title" type="text" 
+                                modelValue="DevOps Инженер"
+                                 :showLabel="true" label="Заголовок резюме"/>
+                                 <!-- контактный номер можно оставить пустым -->
+                                 <InputEl id="resume_phone" type="text" placeholder="Контактный номер" :showLabel="true" label="Телефон"/>
+                                <SelectEl
+                                    v-model="selectedValue"
+                                    :items="[
+                                        { value: 'hh', label: 'HH.RU' },
+                                        { value: 'linkedin', label: 'Linkedin' },
+                                        { value: 'referral', label: 'Личный контакт' },
+                                        { value: 'other', label: 'Другое' },
+                                    ]"
+                                    label="Источник"/>
+                            </div>
                             <div class="buttons-row">
-                            <ButtonEl styleType="outlined" size="large">Отмена</ButtonEl>
-                            <ButtonEl styleType="main" size="large">Сохранить</ButtonEl>
-                        </div>
-                    </template>
-                </ModalWindow>
+                                <ButtonEl styleType="outlined" size="large">Отмена</ButtonEl>
+                                <ButtonEl styleType="main" size="large">Добавить</ButtonEl>
+                            </div>
+                        </template>
+                    </ModalWindow>
+                    <ModalWindow modalTitle="Редактировать вакансию">
+                        <template #trigger="{ openModal }">
+                            <ButtonEl styleType="outlined" @click="openModal">Редактировать</ButtonEl>
+                        </template>
+                        <template #content>
+                            <MiniTabsNav :tabs="['Общее', 'Процесс']" :selectedIndex="0" />
+                            <div class="input-container-lg">
+                                <InputEl id="vacancy_title" type="text" modelValue="DevOps Инженер" :showLabel="true" label="Заголовок вакансии"/>
+                                <!-- назначать менеджера может только админ -->
+                                <SelectEl
+                                v-model="selectedValue"
+                                :items="[
+                                { value: '5', label: 'Иван Иванов' },
+                                { value: '12', label: 'Ольга В.' },
+                                ]"
+                                label="Менеджер вакансии"/>
+                                <SelectEl
+                                v-model="selectedValue"
+                                :items="[
+                                { value: 'active', label: 'В работе' },
+                                { value: 'paused', label: 'Приостановлена' },
+                                { value: 'closed', label: 'Закрыта' },
+                                { value: 'draft', label: 'Черновик' },
+                                ]"
+                                label="Статус вакансии"/>
+                                <InputEl id="vacancy_description" type="text" modelValue="DevOps Инженер в отдел разрабтки" :showLabel="true" label="Описание вакансии"/>
+                            </div>
+                                <div class="buttons-row">
+                                <ButtonEl styleType="outlined" size="large">Отмена</ButtonEl>
+                                <ButtonEl styleType="main" size="large">Сохранить</ButtonEl>
+                            </div>
+                        </template>
+                    </ModalWindow>
+                </div>
             </div>
         </div>
         <StageSelector
