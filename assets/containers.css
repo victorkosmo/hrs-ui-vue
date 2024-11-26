@@ -11,4 +11,53 @@
     gap: 6px;
     justify-content: center;
     align-items: center;
-  }
+}
+
+.container-row-full {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-row-full-split {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 6px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container-col-full {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container-col-fill {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 6px;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.container-col-fit {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
