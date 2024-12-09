@@ -1,0 +1,78 @@
+{
+    "work_experience": {
+        "total_months": 73,
+        "positions": [
+            {
+                "company": "Tech Corp",
+                "title": "Senior Developer",
+                "period": {
+                    "start": "2021-01",
+                    "is_current": true
+                },
+                "description": "На позиции Product Manager я занимался выводом на рынок таких инновационных решений, как:\n\n1. \"VSQL\" - No-Code решение для управления данными, ориентированного на B2B и частных пользователей.\n\n2. \"Gift-o-gotchi\" - B2C сервис, где вы можете оригинально упаковать ваш виртуальный-подарок.\n\nМоя работа включала:\nРазработку Продуктового документа – (Описание продукта: Краткое описание цели и сущности продукта; Цели продукта: Четко сформулированные цели и ожидания от продукта; ЦА;\nГипотезы : Список гипотез, которые предполагается проверить; Описание каждой гипотезы и предполагаемые результаты; KPI; Карту метрик; Расчёт основных метрик; Команда: Список членов команды и их роли). SWOT-Анализ конкурентов , разработку и реализацию маркетинговых стратегий, создание маркетинговых материалов, проведение Глубинных исследований для выявления потребностей клиентов и определения УТП продукта. Также я формировал и тестировал гипотезы с помощью HADI-циклов. Разрабатывал механики сбора фидбека."
+            },
+            {
+                "company": "Start Up Inc",
+                "title": "Developer",
+                "period": {
+                    "start": "2018-01",
+                    "end": "2020-12",
+                    "is_current": false
+                },
+                "description": "1. Created a social media project from idea on paper to a working website with profit.\n- Searched for new employees and formed a five-person department.\n- Built processes and communications between departments.\n- Prioritized tasks in the project and prepared technical specifications for the development and design departments.\n- Wrote user stories and scenarios.\n- Participated in the formation of the backlog.\n- Conducted A/B testing.\n- Formed ways to monetize the project.\n- Created metric collection tools and tools for analytics visualization and conducting the exit management process.\n- Сonfigured and streamlined useful processes with other teams in Jira.\n\n1. Created and implemented tools for the relocation process of all employees in a short time.\n2. Created tools to automate the work processes of the corporate culture department: business trips, events and relocation bonuses.\n- Created metric collection tools and tools for analytics visualization and conducting the exit management process.\n- Сonfigured and streamlined useful processes with other teams in Jira.\n\n1. Created and implemented tools for the relocation process of all employees in a short time.\n2. Created tools to automate the work processes of the corporate culture department: business trips, events and relocation bonuses.\n- Created metric collection tools and tools for analytics visualization and conducting the exit management process.\n- Сonfigured and streamlined useful processes with other teams in Jira.\n\n1. Created and implemented tools for the relocation process of all employees in a short time.\n2. Created tools to automate the work processes of the corporate culture department: business trips, events and relocation bonuses."
+            }
+        ],
+        "about": "Проекты:\n1. Управление продуктовой командой в новом направлении маркетплейса Omnis:\n- Сбор компетенций, формирование списка должностей и тесное взаимодействие с командой.\n\n2. Анализ конкурентов на рынке онлайн-доставки лекарств. Анализ аудитории. Определение характеристик ЦА сервиса Omnis в категории 'Аптека':\n- SWOT-анализ конкурентов, анализ аудитории, создание портретов пользователей.\n\n3. Исследование рынка лекарственных препаратов, оценка его размера и тенденции развития:\n- Анализ рынка доставки лекарств, использование метрик TAM–SAM–SOM и тренда \"Снизу вверх\"."
+    },
+    "last_position": {
+        "company": "Tech Corp",
+        "title": "Senior Developer",
+        "period": {
+            "start": "2021-01",
+            "is_current": true
+        },
+        "description": "Leading development team..."
+    },
+    "languages": [
+        {
+            "code": "EN",
+            "level": "B2"
+        },
+        {
+            "code": "CN",
+            "level": "C1"
+        }
+    ],
+    "education": [
+        {
+            "institution": "Финансовый университет при Правительстве Российской Федерации",
+            "type": "university",
+            "title": "Информационных технологий и анализа больших данных, Информационная безопасность.",
+            "period": {
+                "start": "2014-09",
+                "end": "2018-06",
+                "is_current": false
+            }
+        },
+        {
+            "institution": "Online Platform",
+            "type": "course",
+            "title": "Advanced ML Course",
+            "period": {
+                "start": "2020-01",
+                "end": "2020-03",
+                "is_current": false
+            }
+        },
+        {
+            "institution": "Яндекс Практикум, Product Manager",
+            "type": "course",
+            "title": "Курс «Продакт-менеджер» с нуля",
+            "period": {
+                "start": null,
+                "end": "2020",
+                "is_current": false
+            }
+        }
+    ]
+}

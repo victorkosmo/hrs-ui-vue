@@ -71,10 +71,16 @@
             />
           </div>
           <!-- Dynamic Content Based on Active Tab -->
-          <div class="container-col-fill" style="padding: 30px 20px; background-color: white;">
-            <p v-if="activeTab === 'resume'">This is the resume content for {{ applicantData.name }}.</p>
-            <p v-if="activeTab === 'contacts'">Phone Number: {{ applicantData.phoneNumber }}</p>
-            <p v-if="activeTab === 'notes'">Notes: Add notes about {{ applicantData.name }} here.</p>
+          <div class="modal-tabs-container">
+            <div class="corner-tab-content" v-if="activeTab === 'resume'">
+              <ApplicantResume :resume-data="applicantData.resume" />
+            </div>
+            <div class="corner-tab-content" v-if="activeTab === 'contacts'">
+              <p>Phone Number: {{ applicantData.phoneNumber }}</p>
+            </div>
+            <div class="corner-tab-content" v-if="activeTab === 'notes'">
+              <p>Notes:</p>
+            </div>
           </div>
         </div>
       </div>
@@ -88,6 +94,7 @@ import KeyValueText from './KeyValueText.vue';
 import ButtonEl from './ButtonEl.vue';
 import CornerTab from './CornerTab.vue';
 import Dropdown from './Dropdown.vue';
+import resumeData from '~/data/samples/resume3.json'; // Import JSON data from the "data" folder
 
 export default {
   name: 'ApplicantModal',
@@ -112,6 +119,7 @@ export default {
         location: 'Москва',
         stageTitle: 'Первичное согласование',
         phoneNumber: '+7 123 456 78 90',
+        resume: resumeData, // Assign the imported JSON to the "resume" field
       },
       vacancyInfo: {
         stageList: ['Добавлен', 'Скрининг', 'Оффер'],

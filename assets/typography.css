@@ -11,6 +11,7 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     font-size: 28px; /* Mobile-specific size for h1 */
+    margin: 0;
   }
 }
 
@@ -19,6 +20,7 @@ h2 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 24px; /* Default desktop size */
+  margin: 0;
 }
 
 /* Mobile adjustment for H2 */
@@ -33,6 +35,7 @@ h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px; /* Default desktop size */
+  margin: 0;
 }
 
 @media (max-width: 768px) {

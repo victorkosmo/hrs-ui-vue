@@ -1,0 +1,69 @@
+{
+    "work_experience": {
+        "total_months": 118,
+        "positions": [
+            {
+                "company": "ADV/web-engineering",
+                "title": "Ведущий разработчик PHP/Bitrix (направление Ecom)",
+                "period": {
+                    "start": "2026-08",
+                    "is_current": true
+                },
+                "description": "Разработка и поддержка интернет магазина Sammy Beauty (https://sammybeauty.ru/), интеграция с внешними сервисами (1С, PickPoint, DaData, Mindbox). PHP7, Symfony, Bitrix, Elasticsearch, RabbitMQ, Twig, Coachbase, SOAP, REST.\n\nРазработка интернет магазина McDonalds (https://vkusnoitochka.ru/), интеграция с внешними сервисами (1С, DeliveryClub, SmsGate, ExpertSender). PHP7, Bitrix, Symfony, Twig, Elasticsearch, RabbitMQ, Coachbase, SOAP, REST.\n\nРазработка и поддержка интернет магазина Sisley Paris (https://sisley-paris.ru/), интеграция с внешними сервисами (1С, PickPoint, RetailCRM, Молком). PHP7, Bitrix, Symfony, Twig, Elasticsearch, RabbitMQ, Coachbase, SOAP, REST.\n\nРазработка интернет магазина АЛРОСА (https://alrosadiamond.ru/), интеграция с внешними сервисами (1С). PHP5, Bitrix, Blade, Memcache, SOAP, REST.\n\nРазработка и поддержка интернет магазина ВСК (https://shop.vsk.ru), интеграция с внешними сервисами (ВСК, РСА, 1С, ExpertSender). PHP5/PHP7, Bitrix, Symfony, Jade, MongoDB, RabbitMQ, SOAP, REST.\n\nРазработка интернет магазина MR GROUP (https://www.mr-group.ru/projects/apartments/), интеграция с внешними сервисами (1С, Mindbox). PHP8, Symfony, Bitrix, Elasticsearch, RabbitMQ, Memcached, REST.\n\nРазработка и поддержка интернет магазина СОГАЗ (https://direct.sogaz.ru), интеграция с внешними сервисами (1С, РСА, SmsGate). PHP5/PHP7, Bitrix, Symfony, Twig, MongoDB, RabbitMQ, Sphinx, Redis, SOAP, REST.\n\nРазработка интернет магазина Nutricia (https://nutricia-medical.ru/), интеграция с внешними сервисами (1С). PHP7, Bitrix, Symfony, Twig, Elasticsearch, RabbitMQ, Coachbase, SOAP, REST.\n\nРазработка и поддержка интернет магазина Mixit (https://mixit.ru/), интеграция с внешними сервисами (1С, PickPoint, Mindbox). PHP5, Symfony, Bitrix, RabbitMQ, Sphinx, Twig, Memcache, SOAP, REST.\n\nРазработка интернет магазина 69 Cosmetics, интеграция с внешними сервисами (1С, PickPoint, DaData, Mindbox). PHP7, Symfony, Bitrix, Elasticsearch, RabbitMQ, Twig, Coachbase, SOAP, REST.\n\nРазработка интернет магазина Kristal Elixir, интеграция с внешними сервисами (1С, PickPoint, DaData, Mindbox). PHP7, Symfony, Bitrix, Elasticsearch, RabbitMQ, Twig, Coachbase, SOAP, REST.\n\nРазработка и поддержка интернет магазина 2MOOD (https://www.2moodstore.com/), интеграция с внешними сервисами (1С). PHP5, Bitrix, Memcache.\n"
+            },
+            {
+                "company": "ЗАО Акадо-столица (до 2014г), ОАО Комкор (Акадо-Телеком)",
+                "title": "Ведущий разработчик",
+                "period": {
+                    "start": "2014-12",
+                    "end": "2015-09",
+                    "is_current": false
+                },
+                "description": "Создание системы сбора и обработки данных анализа спектра принимаемого сигнала абонентскими DOCSIS-устройствами (PHP5, JavaScript, OracleSQL)\nРазработка системы управления SSL-сертификатами компании, интеграция в существующее ПО (PHP5, JavaScript, OracleSQL)"
+            }
+        ],
+        "about":"Абстрактный, рассеянный тип мышления. Экстраверт. Характер нетерпеливый, иногда импульсивный. Хорошо вникаю в суть проблемы, быстро нахожу подходящее решение."
+    },
+    "languages": [
+        {
+            "code": "RU",
+            "level": "Native"
+        },
+        {
+            "code": "EN",
+            "level": "C1"
+        }
+    ],
+    "education": [
+        {
+            "institution": "Московский государственный горный университет, Москва",
+            "type": "university",
+            "title": "АСП, Системы автоматизированного проектирования",
+            "period": {
+                "start": null,
+                "end": "2005",
+                "is_current": false
+            }
+        },
+        {
+            "institution": "Bitrix CMS. Администратор. Базовый",
+            "type": "certification",
+            "title": "1С Битрикс, Разработчик",
+            "period": {
+                "start": null,
+                "end": "2021",
+                "is_current": false
+            }
+        },
+        {
+            "institution": "Разработчик Bitrix Framework",
+            "type": "certification",
+            "title": "1С Битрикс, Разработчик",
+            "period": {
+                "start": null,
+                "end": "2021",
+                "is_current": false
+            }
+        }
+    ]
+}
