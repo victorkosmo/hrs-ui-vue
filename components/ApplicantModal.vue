@@ -76,7 +76,7 @@
               <ApplicantResume :resume-data="applicantData.resume" />
             </div>
             <div class="corner-tab-content" v-if="activeTab === 'contacts'">
-              <p>Phone Number: {{ applicantData.phoneNumber }}</p>
+              <ApplicantContacts :phone="applicantData.phoneNumber" :email="applicantData.email" :whatsapp="applicantData.whatsapp" :telegram="applicantData.telegram" />
             </div>
             <div class="corner-tab-content" v-if="activeTab === 'notes'">
               <p>Notes:</p>
@@ -94,6 +94,7 @@ import KeyValueText from './KeyValueText.vue';
 import ButtonEl from './ButtonEl.vue';
 import CornerTab from './CornerTab.vue';
 import Dropdown from './Dropdown.vue';
+import ApplicantContacts from './ApplicantContacts.vue';
 import resumeData from '~/data/samples/resume3.json'; // Import JSON data from the "data" folder
 
 export default {
@@ -118,7 +119,10 @@ export default {
         source: 'HH.RU',
         location: 'Москва',
         stageTitle: 'Первичное согласование',
-        phoneNumber: '+7 123 456 78 90',
+        phoneNumber: '+7 900 123 45 67', //phone_number value in DB
+        email: '',
+        whatsapp: '',
+        telegram: '@testusername',
         resume: resumeData, // Assign the imported JSON to the "resume" field
       },
       vacancyInfo: {
