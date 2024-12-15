@@ -79,7 +79,7 @@
               <ApplicantContacts :phone="applicantData.phoneNumber" :email="applicantData.email" :whatsapp="applicantData.whatsapp" :telegram="applicantData.telegram" />
             </div>
             <div class="corner-tab-content" v-if="activeTab === 'notes'">
-              <p>Notes:</p>
+              <ApplicantNotes :notes-data="applicantNotes.notes" :viewer-id="applicantNotes.viewerId" />
             </div>
           </div>
         </div>
@@ -95,7 +95,9 @@ import ButtonEl from './ButtonEl.vue';
 import CornerTab from './CornerTab.vue';
 import Dropdown from './Dropdown.vue';
 import ApplicantContacts from './ApplicantContacts.vue';
+import ApplicantNotes from './ApplicantNotes.vue';
 import resumeData from '~/data/samples/resume3.json'; // Import JSON data from the "data" folder
+import notesData from '~/data/samples/notes1.json'; // Import JSON data from the "data" folder
 
 export default {
   name: 'ApplicantModal',
@@ -124,6 +126,10 @@ export default {
         whatsapp: '',
         telegram: '@testusername',
         resume: resumeData, // Assign the imported JSON to the "resume" field
+      },
+      applicantNotes: {
+        viewerId: '987e4567-e89b-12d3-a456-426614174001', // Hardcoded for demo
+        notes: notesData, // Assign the imported JSON to the "notes" field
       },
       vacancyInfo: {
         stageList: ['Добавлен', 'Скрининг', 'Оффер'],

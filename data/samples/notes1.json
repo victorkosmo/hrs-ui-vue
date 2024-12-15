@@ -1,0 +1,29 @@
+{
+    "applicant_id": "123e4567-e89b-12d3-a456-426614174000",
+    "notes": [
+      {
+        "user_id": "987e4567-e89b-12d3-a456-426614174001",
+        "user_name": "John Doe",
+        "applicant_id": "123e4567-e89b-12d3-a456-426614174000",
+        "text": "Met with the applicant for the first interview. Very promising skills in Python and SQL.",
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "date": "2024-10-01T10:30:00"
+      },
+      {
+        "user_id": "987e4567-e89b-12d3-a456-426614174002",
+        "user_name": "Jane Smith",
+        "applicant_id": "123e4567-e89b-12d3-a456-426614174000",
+        "text": "Follow-up call scheduled for next week to discuss the next steps in the hiring process.",
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "date": "2023-10-05T14:45:00"
+      },
+      {
+        "user_id": "987e4567-e89b-12d3-a456-426614174003",
+        "user_name": "Alice Johnson",
+        "applicant_id": "123e4567-e89b-12d3-a456-426614174000",
+        "text": "Applicant has been shortlisted for the final round of interviews.",
+        "id": "550e8400-e29b-41d4-a716-446655440002",
+        "date": "2023-10-10T09:15:10"
+      }
+    ]
+  }
