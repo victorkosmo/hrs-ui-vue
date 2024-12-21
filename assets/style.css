@@ -51,6 +51,19 @@ body {
   background-color: var(--slate-50);
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 25px; /* Same as production */
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
 .sidebar-layout {
   display: flex;
   flex-direction: row;
@@ -58,16 +71,44 @@ body {
   height: 100vh;
 }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-left: 260px; /* Align with sidebar width */
+  box-sizing: border-box;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 260px;
   height: 100vh;
   background-color: white;
   padding: 25px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  box-sizing: border-box;
+}
+
+.sidebar-top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-self: stretch;
+  cursor: pointer;
+}
+
+.sidebar-tab-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
 }
 
 .settings-container {
@@ -230,6 +271,28 @@ body {
 .resume-block-toggle:hover {
   cursor: pointer;
   background-color: var(--slate-50);
+}
+
+.pagination-button-container {
+  width: 18px;
+  height: 18px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--slate-200);
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: var(--slate-50);
+}
+
+.pagination-button-container:hover:not(.pagination-button-disabled) {
+  background-color: var(--slate-100);
+}
+
+.pagination-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media screen and (min-width: 768px) {

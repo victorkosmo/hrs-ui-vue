@@ -29,22 +29,11 @@ const updateSelectedTab = (index) => {
       :selectedIndex="selectedTab" 
       @update:selectedIndex="updateSelectedTab"
     />
-    <div id="main-container" class="main-container">
-      <slot />
+    <!-- Only use one class if needed -->
+    <div class="app-content">
+      <div class="main-container">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  box-sizing: border-box;
-}
-</style>

@@ -30,10 +30,10 @@ const selectTab = (index) => {
 </script>
 
 <template>
-  <div class="sidebar">
-    <div class="top-section">
+  <div class="sidebar-container">
+    <div class="sidebar-top-section">
       <img src="/public/hrs-logo.svg" alt="HRS Logo">
-      <div class="tab-section">
+      <div class="sidebar-tab-section">
         <MenuTab 
           v-for="(tab, index) in tabs" 
           :key="index" 
@@ -47,21 +47,3 @@ const selectTab = (index) => {
     <UserBar userName="Ivan Ivanov" orgTitle="ООО Алдан"/>
   </div>
 </template>
-
-<style scoped>
-.top-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  align-self: stretch;
-}
-.tab-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: flex-start;
-  gap: 10px;
-  align-self: stretch;
-}
-</style>
