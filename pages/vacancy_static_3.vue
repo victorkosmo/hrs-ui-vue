@@ -57,11 +57,11 @@ const updatePage = (newPage) => {
     </div>
     <StageSelector
       :stages="[
-        { id: 1, title: 'Все' },
-        { id: 2, title: 'Добавлен' },
-        { id: 3, title: 'Отказ' },
-        { id: 4, title: 'Скриннинг' },
-        { id: 5, title: 'Первичное согласование' }
+        { id: 1, title: 'Все', counter: 101 },
+        { id: 2, title: 'Добавлен', counter: 83 },
+        { id: 3, title: 'Отказ', counter: 12 },
+        { id: 4, title: 'Скриннинг', counter: 4 },
+        { id: 5, title: 'Первичное согласование', counter: 0 }
       ]"
     />
     <div id="vacancy-content-container" class="vacancy-content-container" ref="vacancyContentRef">

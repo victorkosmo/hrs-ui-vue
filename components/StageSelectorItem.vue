@@ -15,6 +15,10 @@ const props = defineProps({
     type: [String, Number],
     required: true,
   },
+  counter: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const emit = defineEmits(['select-stage']);
@@ -36,16 +40,27 @@ const handleClick = () => {
     <p class="menu-tab-text" :style="{ color: selected ? 'var(--blue-500)' : 'var(--slate-500)' }">
       {{ title }}
     </p>
+      <div
+        class="counter-circle"
+        :class="{ 'selected-counter': selected, 'non-selected-counter': !selected }"
+      >
+        <p class="counter-text" :style="{ color: selected ? 'var(--blue-500)' : 'var(--slate-500)' }">
+          {{ counter }}
+        </p>
+      </div>
   </div>
 </template>
 
 <style scoped>
 .stage-selector-item {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  height: 30px;
   padding: 2px 6px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: color 0.3s ease
+  transition: color 0.3s ease;
 }
 
 .selected-off:hover .menu-tab-text {
@@ -53,6 +68,30 @@ const handleClick = () => {
 }
 
 .menu-tab-text {
+  transition: color 0.3s ease;
+}
+
+.counter-circle {
+  padding: 6px 10px;
+  width: fit-content;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.selected-counter {
+  background-color: var(--blue-50);
+}
+
+.non-selected-counter {
+  background-color: var(--slate-100);
+}
+
+.counter-text {
+  font-size: 14px;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 </style>

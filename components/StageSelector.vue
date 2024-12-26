@@ -6,6 +6,7 @@
       :key="stage.id"
       :title="stage.title"
       :stageId="stage.id"
+      :counter="stage.counter"
       :selected="selectedStage === stage.id"
       @select-stage="handleStageSelect"
     />
