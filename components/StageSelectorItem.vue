@@ -70,28 +70,4 @@ const handleClick = () => {
 .menu-tab-text {
   transition: color 0.3s ease;
 }
-
-.counter-circle {
-  padding: 6px 10px;
-  width: fit-content;
-  border-radius: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease;
-}
-
-.selected-counter {
-  background-color: var(--blue-50);
-}
-
-.non-selected-counter {
-  background-color: var(--slate-100);
-}
-
-.counter-text {
-  font-size: 14px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
 </style>

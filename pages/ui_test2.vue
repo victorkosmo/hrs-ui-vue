@@ -14,14 +14,12 @@ import SelectionTabsContainer from '../components/SelectionTabsContainer.vue'
 <template>
   <SidebarLayout :selectedTabIndex="0">
       <div class="section-top-container">
-        <div class="container-row-fit" style="gap: 16px;">
-          <h2 style="color: var(--slate-500);">Вакансии</h2>
-          <SelectionTabsContainer>
-              <SelectionTab :selected="true" text="Активные" :counter="true" :number="5" />
-              <SelectionTab :selected="false" text="Мои вакансии" :counter="true" :number="2" />
-              <SelectionTab :selected="false" text="Архив вакансий" :counter="true" :number="4" />
-          </SelectionTabsContainer>
-        </div>
+        <h2 style="color: var(--slate-500);">Вакансии</h2>
+        <SelectionTabsContainer>
+            <SelectionTab :selected="true" text="Messages" :counter="true" :number="5" />
+            <SelectionTab :selected="false" text="Notifications" :counter="true" :number="12" />
+            <SelectionTab :selected="false" text="Settings" :counter="true" :number="20" />
+        </SelectionTabsContainer>
         <ModalWindow modalTitle="Создать новую вакансию">
             <template #trigger="{ openModal }">
               <ButtonEl @click="openModal">Новая вакансия</ButtonEl>
