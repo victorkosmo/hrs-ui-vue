@@ -73,7 +73,10 @@
           <!-- Dynamic Content Based on Active Tab -->
           <div class="modal-tabs-container">
             <div class="corner-tab-content" v-if="activeTab === 'resume'">
-              <ApplicantResume :resume-data="applicantData.resume" />
+              <ApplicantResume v-if="applicantData.resume" :resume-data="applicantData.resume" />
+              <template v-else>
+                <ResumeFileFlow />  <!-- Use ResumeFlow component -->
+              </template>
             </div>
             <div class="corner-tab-content" v-if="activeTab === 'contacts'">
               <ApplicantContacts :phone="applicantData.phoneNumber" :email="applicantData.email" :whatsapp="applicantData.whatsapp" :telegram="applicantData.telegram" />
@@ -96,14 +99,22 @@ import CornerTab from './CornerTab.vue';
 import Dropdown from './Dropdown.vue';
 import ApplicantContacts from './ApplicantContacts.vue';
 import ApplicantNotes from './ApplicantNotes.vue';
+import ApplicantResume from './ApplicantResume.vue';
+import UploadResume from './UploadResume.vue';
+import UploadedResume from './UploadedResume.vue';
+import ResumeFileFlow from './ResumeFileFlow.vue'; // Import ResumeFlow
 import resumeData from '~/data/samples/resume3.json'; // Import JSON data from the "data" folder
 import notesData from '~/data/samples/notes1.json'; // Import JSON data from the "data" folder
 
 export default {
   name: 'ApplicantModal',
+  components: {
+    UploadResume,
+    UploadedResume,
+    ResumeFileFlow, // Register Resume File Flow
+  },
   props: {
     visible: {
-      // Demo purpose only
       type: Boolean,
       required: true,
     },
@@ -112,7 +123,6 @@ export default {
       required: true,
     },
   },
-  // Dummy data for demo purposes only
   data() {
     return {
       applicantData: {
@@ -121,27 +131,26 @@ export default {
         source: 'HH.RU',
         location: 'Москва',
         stageTitle: 'Первичное согласование',
-        phoneNumber: '+7 900 123 45 67', //phone_number value in DB
+        phoneNumber: '+7 900 123 45 67',
         email: '',
         whatsapp: '',
         telegram: '@testusername',
-        resume: resumeData, // Assign the imported JSON to the "resume" field
+        resume: null, // Initially no resume
       },
       applicantNotes: {
-        viewerId: '987e4567-e89b-12d3-a456-426614174001', // Hardcoded for demo
-        notes: notesData, // Assign the imported JSON to the "notes" field
+        viewerId: '987e4567-e89b-12d3-a456-426614174001',
+        notes: notesData,
       },
       vacancyInfo: {
         stageList: ['Добавлен', 'Скрининг', 'Оффер'],
         rejectList: ['Слабые навыки', 'Мало опыта', 'Другое']
       },
-      activeTab: 'resume', // Default active tab
+      activeTab: 'resume',
     };
   },
-  // Dummy tab methods for demo purposes only
   methods: {
     setActiveTab(tabName) {
-      this.activeTab = tabName; // Set the active tab
+      this.activeTab = tabName;
     },
   },
 };
